@@ -19,16 +19,14 @@ public class Friedmann
 
     }
 
-
+    // clac the length of the key
     public static double calcKeyLength (double indexC, int textLength)
     {
         double indexD = 0.0762;
         double indexZ = 0.0385;
-
-
-        double help1 = (indexD-indexZ)*textLength; //0,9048
+        double help1 = (indexD-indexZ)*textLength;
         double help2 = ((textLength-1)*indexC) +indexD - indexZ*textLength;
-                        //1,4168  - 1,0002    0,4166
+
         double result = help1/help2;
         return  result;
 
@@ -51,7 +49,7 @@ public class Friedmann
         return result;
 
     }
-
+    //
     public static List<Integer> addValues (Map<Character,Integer> alphabet)
     {
         List <Integer> zerg = new ArrayList<>();
@@ -65,7 +63,7 @@ public class Friedmann
 
     }
 
-
+    // count every character in the text
     public static Map<Character, Integer> count (String text)
     {
         Map<Character,Integer> alphabet = new HashMap<>();
