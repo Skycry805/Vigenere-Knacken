@@ -7,8 +7,51 @@ public class Divid
 
     public static void main (String [] args)
     {
-        String text = "LWFCOSYJYWTWHRYKUGKLHLLOMGMXLPYNABVJJLAWTCVGALUTQBUXLQUKOVZCLRBSNSETPRYPMFDTLEOXSSJILPFLGBULHIBJQBUXJLBAQFJEYIWZQBRTOILLEWTWKMYKQOIBLIOFESITYBMLMRKVSEOTFAZGDIHFUQYTBGBKMUVLPVBSNSETPRYOUFBAPGBKOVNTYITWUHMDYYHKMPVGEAYFZKZGKELSGTMDYFYJQWKTAWYAZKFASIHXPOECTYYKESELPVTMQFJIBRMWDSRCNWNVMJFGEEVDQUVCPGBKFSYTOMYJVSKOAZIJQITWCSYDXWXPUKMLRFVXDMYKASKLHAYAXWTWHRYLIOJMNPUMNSLCKMBJZWTWARYAZWTWZXYZQVZTYSBFQOEVZXQWUZZROINOMGEXJLNNQFXTZWYFTOSTEMWZTOSTUMWZFJVGNIMKQBUPZWCUTBZROXBAQFSXUAYYQBUTZAYYQGUTYZIJYWIAPIALECESLVHPISXTUHYKISXTZHYJNSITPXMZUBKTYQCJXWVVAMWZTOSTUMWZFJVGNIMKQBUPZWQADPVGLMNKJGVXALOFPSIIQEBJQBXTNIHVUSJTTEMUTWETUOUWYDWTUMWZTOSTUMWZFJVGNIMKQBUPZWMAQLJTPXBMZRVGANUZDSEXOVYSDAVTUWWZUQBTUYGMZGQJGILKFCVGLROFPBRROICFQAAPOVBMZRVGABXWEYIXLKYKTOSTPGBFUQYICILYQGJTUAUKPOJLPGBLUUJILMMLIWIHPRXFAQYWPILDMGJIBRMPTSLILRUUTHUXLWYJMFDTLZIFTWVGHYMWUBVQVXMUTOWIZGBAOYVCSEMKFIEHOIOLQBRROXRVUSJTOSYZXSEOBQYJLWKILVHTDWEVLRBWGHVCHGBLISISLRQADRZTZIBSXZVCHYMWDRVMZXUZXIESZXYAZSIQLFYFXOJHLRMAQGFASIHMZGYDLVYFHCDGVXYFWSICIMMRGAJROAUJLSEMOMGEQZYTBXYFMQYIDILVQBNXYHUXGSIHVVAWZRRHZWCWZWVBHPMNQFXTZWYFPOJXZXTAABLCKBQADVRQLREWUBVPUKML";
-        int keyLength = 8;
+        String text = "WENNHINTERGRIECHENGRIECHENKRIECHENKRIECHENGRIECHENGRIECHENNACH";
+        int keyLength = 4;
+
+        StringBuilder[] builders = new StringBuilder[keyLength];
+
+        for (int i=0; i<keyLength;i++)
+        {
+            builders[i] = new StringBuilder();
+        }
+        int j=0;
+        for (int i=0;i<text.length();i++)
+        {
+
+            if (j==keyLength)
+            {
+                j=0;
+                builders[j].append(text.charAt(i));
+                j++;
+            }
+            else
+            {
+                builders[j].append(text.charAt(i));
+                j++;
+            }
+
+        }
+        for (int i=0;i<builders.length; i++)
+        {
+            System.out.println("StringBuilder " + i + ": " + builders[i].toString());
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         List<String> lines = new ArrayList<>();
 
         for (int i=0; i<text.length();i=i+keyLength)
@@ -33,10 +76,15 @@ public class Divid
         {
             for (int j=0;j<diagramm.length;j++)
             {
-                System.out.print(diagramm[j][i]);
+                if (diagramm[j][i] != null)
+                {
+                    System.out.print(diagramm[j][i]);
+                }
             }
             System.out.println();
         }
+
+         */
     }
 
 }
